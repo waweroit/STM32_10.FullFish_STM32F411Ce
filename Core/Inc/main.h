@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -31,11 +31,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdbool.h>
-#include <stdio.h>
-#include "waweroBasicFunction.h"
-#include "USARTCommunication.h"
-#include "W25Q64.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -63,15 +59,13 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define LED_01_Pin GPIO_PIN_13
 #define LED_01_GPIO_Port GPIOC
-#define UserKey_Pin GPIO_PIN_0
-#define UserKey_GPIO_Port GPIOA
-#define UserKey_EXTI_IRQn EXTI0_IRQn
-#define SPI1_CS_Pin GPIO_PIN_4
-#define SPI1_CS_GPIO_Port GPIOA
-#define FloatSensor_Pin GPIO_PIN_12
-#define FloatSensor_GPIO_Port GPIOA
-#define ACRelay_Pin GPIO_PIN_5
-#define ACRelay_GPIO_Port GPIOB
+#define DS18B20_Output_Pin GPIO_PIN_1
+#define DS18B20_Output_GPIO_Port GPIOB
+#define EncoderButton_Pin GPIO_PIN_2
+#define EncoderButton_GPIO_Port GPIOB
+#define WaterSensor_Pin GPIO_PIN_15
+#define WaterSensor_GPIO_Port GPIOA
+#define WaterSensor_EXTI_IRQn EXTI15_10_IRQn
 
 /* USER CODE BEGIN Private defines */
 

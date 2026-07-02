@@ -1,0 +1,2 @@
+../Core/Src/buttonsSetup.c:18:9:BUTTON_State	24	static
+../Core/Src/buttonsSetup.c:53:14:getButtonEvent	32	static

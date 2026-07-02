@@ -1,0 +1,21 @@
+../Core/Inc/TemperatureSensors.hpp:16:7:constexpr ITemperatureSensor::ITemperatureSensor()	1
+../Core/Inc/TemperatureSensors.hpp:19:10:ITemperatureSensor::~ITemperatureSensor()	1
+../Core/Inc/TemperatureSensors.hpp:19:10:virtual ITemperatureSensor::~ITemperatureSensor()	1
+../Core/Src/TemperatureSensors.cpp:51:1:DS18B20Sensor::DS18B20Sensor(GPIO_TypeDef*, uint16_t, TIM_HandleTypeDef*)	1
+../Core/Src/TemperatureSensors.cpp:59:6:void DS18B20Sensor::DelayUs(uint16_t)	2
+../Core/Src/TemperatureSensors.cpp:66:6:void DS18B20Sensor::LineInput()	1
+../Core/Src/TemperatureSensors.cpp:75:6:void DS18B20Sensor::LineOutputOD()	1
+../Core/Src/TemperatureSensors.cpp:85:6:void DS18B20Sensor::DriveLow()	1
+../Core/Src/TemperatureSensors.cpp:91:6:void DS18B20Sensor::ReleaseLine()	1
+../Core/Src/TemperatureSensors.cpp:97:9:uint8_t DS18B20Sensor::ReadLine()	2
+../Core/Src/TemperatureSensors.cpp:102:6:bool DS18B20Sensor::ResetPulse()	2
+../Core/Src/TemperatureSensors.cpp:118:6:void DS18B20Sensor::WriteBit(uint8_t)	2
+../Core/Src/TemperatureSensors.cpp:134:9:uint8_t DS18B20Sensor::ReadBit()	1
+../Core/Src/TemperatureSensors.cpp:147:6:void DS18B20Sensor::WriteByte(uint8_t)	2
+../Core/Src/TemperatureSensors.cpp:156:10:uint8_t DS18B20Sensor::ReadByte()	2
+../Core/Src/TemperatureSensors.cpp:165:6:bool DS18B20Sensor::StartConversion()	2
+../Core/Src/TemperatureSensors.cpp:173:6:bool DS18B20Sensor::ReadScratchpad(uint8_t*)	3
+../Core/Src/TemperatureSensors.cpp:188:9:static uint8_t DS18B20Sensor::Crc8(const uint8_t*, uint8_t)	4
+../Core/Src/TemperatureSensors.cpp:203:7:virtual float DS18B20Sensor::GetTemperature()	7
+../Core/Inc/TemperatureSensors.hpp:48:7:DS18B20Sensor::~DS18B20Sensor()	1
+../Core/Inc/TemperatureSensors.hpp:48:7:virtual DS18B20Sensor::~DS18B20Sensor()	1

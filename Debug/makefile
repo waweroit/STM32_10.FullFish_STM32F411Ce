@@ -15,14 +15,38 @@ RM := rm -rf
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(CCM_DEPS)),)
+-include $(CCM_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
 ifneq ($(strip $(S_DEPS)),)
 -include $(S_DEPS)
 endif
 ifneq ($(strip $(S_UPPER_DEPS)),)
 -include $(S_UPPER_DEPS)
 endif
+ifneq ($(strip $(CXXM_DEPS)),)
+-include $(CXXM_DEPS)
+endif
+ifneq ($(strip $(C++M_DEPS)),)
+-include $(C++M_DEPS)
+endif
 ifneq ($(strip $(C_DEPS)),)
 -include $(C_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
 endif
 endif
 
@@ -34,34 +58,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := 10.KMU_FishSTM32F411CEU6
+BUILD_ARTIFACT_NAME := 10.FullFish_STM32F411Ce
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-10.KMU_FishSTM32F411CEU6.elf \
+10.FullFish_STM32F411Ce.elf \
 
 MAP_FILES += \
-10.KMU_FishSTM32F411CEU6.map \
+10.FullFish_STM32F411Ce.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-10.KMU_FishSTM32F411CEU6.list \
+10.FullFish_STM32F411Ce.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: 10.KMU_FishSTM32F411CEU6.elf secondary-outputs
+main-build: 10.FullFish_STM32F411Ce.elf secondary-outputs
 
 # Tool invocations
-10.KMU_FishSTM32F411CEU6.elf 10.KMU_FishSTM32F411CEU6.map: $(OBJS) $(USER_OBJS) C:\Users\wawer\Desktop\GitHub\STM32_REPO\10.KMU_FishSTM32F411CEU6\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "10.KMU_FishSTM32F411CEU6.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\wawer\Desktop\GitHub\STM32_REPO\10.KMU_FishSTM32F411CEU6\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.KMU_FishSTM32F411CEU6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+10.FullFish_STM32F411Ce.elf 10.FullFish_STM32F411Ce.map: $(OBJS) $(USER_OBJS) C:\Users\wawer\Desktop\GitHub\STM32_REPO\10.FullFish_STM32F411Ce\STM32F411CEUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "10.FullFish_STM32F411Ce.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\wawer\Desktop\GitHub\STM32_REPO\10.FullFish_STM32F411Ce\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="10.FullFish_STM32F411Ce.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +94,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-10.KMU_FishSTM32F411CEU6.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "10.KMU_FishSTM32F411CEU6.list"
+10.FullFish_STM32F411Ce.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "10.FullFish_STM32F411Ce.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) 10.KMU_FishSTM32F411CEU6.elf 10.KMU_FishSTM32F411CEU6.list 10.KMU_FishSTM32F411CEU6.map default.size.stdout
+	-$(RM) 10.FullFish_STM32F411Ce.elf 10.FullFish_STM32F411Ce.list 10.FullFish_STM32F411Ce.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

@@ -1,0 +1,12 @@
+../Core/Inc/EncoderController.hpp:21:7:constexpr IEncoder::IEncoder()	1
+../Core/Inc/EncoderController.hpp:23:10:IEncoder::~IEncoder()	1
+../Core/Inc/EncoderController.hpp:23:10:virtual IEncoder::~IEncoder()	1
+../Core/Src/EncoderController.cpp:10:1:EncoderDev::EncoderDev()	1
+../Core/Src/EncoderController.cpp:12:1:EncoderDev::EncoderDev(TIM_HandleTypeDef*, uint32_t)	1
+../Core/Src/EncoderController.cpp:30:10:virtual uint16_t EncoderDev::GetEncoderPulseCount()	1
+../Core/Src/EncoderController.cpp:37:10:virtual uint16_t EncoderDev::GetEncoderPosition()	1
+../Core/Src/EncoderController.cpp:42:14:virtual encoderShift EncoderDev::GetEncoderShift()	7
+../Core/Src/EncoderController.cpp:65:6:virtual void EncoderDev::ResetEncoderPosition()	1
+../Core/Src/EncoderController.cpp:69:6:virtual void EncoderDev::SetEncoderPosition(uint16_t)	1
+../Core/Inc/EncoderController.hpp:33:7:EncoderDev::~EncoderDev()	1
+../Core/Inc/EncoderController.hpp:33:7:virtual EncoderDev::~EncoderDev()	1

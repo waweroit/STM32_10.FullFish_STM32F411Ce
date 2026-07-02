@@ -1,0 +1,7 @@
+../Core/Src/AlarmRTC.cpp:13:6:virtual void alarmRTC::SetConfiguration(AquaConfig*)	1
+../Core/Src/AlarmRTC.cpp:19:6:virtual void alarmRTC::ActionAlarms()	16
+../Core/Src/AlarmRTC.cpp:60:6:bool compareTime(RTC_TimeTypeDef*, TimeConfig*)	3
+../Core/Inc/AlarmRTC.hpp:18:10:IAlarmRTC::~IAlarmRTC()	1
+../Core/Inc/AlarmRTC.hpp:18:10:virtual IAlarmRTC::~IAlarmRTC()	1
+../Core/Inc/AlarmRTC.hpp:23:7:alarmRTC::~alarmRTC()	1
+../Core/Inc/AlarmRTC.hpp:23:7:virtual alarmRTC::~alarmRTC()	1

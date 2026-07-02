@@ -1,0 +1,15 @@
+../Core/Src/RTCController.cpp:20:23:uint8_t Bin2Bcd(uint8_t)	1
+../Core/Src/RTCController.cpp:25:23:uint8_t Bcd2Bin(uint8_t)	1
+../Core/Src/RTCController.cpp:30:20:bool ValidateTime(const RTC_TimeTypeDef*)	5
+../Core/Src/RTCController.cpp:39:20:bool ValidateDate(const RTC_DateTypeDef*)	9
+../Core/Inc/RTCController.hpp:15:7:constexpr IRtc::IRtc()	1
+../Core/Inc/RTCController.hpp:17:10:IRtc::~IRtc()	1
+../Core/Inc/RTCController.hpp:17:10:virtual IRtc::~IRtc()	1
+../Core/Src/RTCController.cpp:49:1:RtcController::RtcController(I2C_HandleTypeDef*, uint8_t)	1
+../Core/Src/RTCController.cpp:56:6:virtual bool RtcController::IsTimeValid()	2
+../Core/Src/RTCController.cpp:70:19:virtual HAL_StatusTypeDef RtcController::SetDateTime(RTC_DateTypeDef*, RTC_TimeTypeDef*)	6
+../Core/Src/RTCController.cpp:114:19:virtual HAL_StatusTypeDef RtcController::ReadTime(RTC_TimeTypeDef*)	7
+../Core/Src/RTCController.cpp:157:19:virtual HAL_StatusTypeDef RtcController::ReadDate(RTC_DateTypeDef*)	4
+../Core/Src/RTCController.cpp:181:6:virtual void RtcController::SynchronizeRTC_MCU(RTC_HandleTypeDef*)	1
+../Core/Inc/RTCController.hpp:28:7:RtcController::~RtcController()	1
+../Core/Inc/RTCController.hpp:28:7:virtual RtcController::~RtcController()	1

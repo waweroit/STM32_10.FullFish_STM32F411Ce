@@ -1,0 +1,17 @@
+../Core/Src/AT24C32_ConfigStorage.cpp:12:10:static uint32_t AT24C32_ConfigStorage::Crc32(const uint8_t*, uint32_t)	4
+../Core/Src/AT24C32_ConfigStorage.cpp:25:10:static uint32_t AT24C32_ConfigStorage::CalcBlobCrc(const Blob&)	1
+../Core/Src/AT24C32_ConfigStorage.cpp:31:6:static bool AT24C32_ConfigStorage::ValidateBlobHeader(const Blob&)	4
+../Core/Src/AT24C32_ConfigStorage.cpp:39:6:static void AT24C32_ConfigStorage::Pack(Blob&, const DeviceConfig&, const AquaConfig&)	1
+../Core/Src/AT24C32_ConfigStorage.cpp:45:6:static void AT24C32_ConfigStorage::Unpack(const Blob&, DeviceConfig&, AquaConfig&)	1
+../Core/Inc/AT24C32_ConfigStorage.hpp:20:7:constexpr IConfigStorage::IConfigStorage()	1
+../Core/Inc/AT24C32_ConfigStorage.hpp:22:13:IConfigStorage::~IConfigStorage()	1
+../Core/Inc/AT24C32_ConfigStorage.hpp:22:13:virtual IConfigStorage::~IConfigStorage()	1
+../Core/Src/AT24C32_ConfigStorage.cpp:51:1:AT24C32_ConfigStorage::AT24C32_ConfigStorage(I2C_HandleTypeDef*, uint8_t)	1
+../Core/Src/AT24C32_ConfigStorage.cpp:57:19:HAL_StatusTypeDef AT24C32_ConfigStorage::WaitReady(uint32_t)	3
+../Core/Src/AT24C32_ConfigStorage.cpp:68:19:HAL_StatusTypeDef AT24C32_ConfigStorage::ReadBytes(uint16_t, uint8_t*, uint16_t)	4
+../Core/Src/AT24C32_ConfigStorage.cpp:78:19:HAL_StatusTypeDef AT24C32_ConfigStorage::WriteBytes(uint16_t, const uint8_t*, uint16_t)	8
+../Core/Src/AT24C32_ConfigStorage.cpp:104:6:virtual bool AT24C32_ConfigStorage::IsStoredDataValid()	3
+../Core/Src/AT24C32_ConfigStorage.cpp:116:19:virtual HAL_StatusTypeDef AT24C32_ConfigStorage::Save(const DeviceConfig*, const AquaConfig*)	3
+../Core/Src/AT24C32_ConfigStorage.cpp:134:19:virtual HAL_StatusTypeDef AT24C32_ConfigStorage::Load(DeviceConfig*, AquaConfig*)	6
+../Core/Inc/AT24C32_ConfigStorage.hpp:30:7:AT24C32_ConfigStorage::~AT24C32_ConfigStorage()	1
+../Core/Inc/AT24C32_ConfigStorage.hpp:30:7:virtual AT24C32_ConfigStorage::~AT24C32_ConfigStorage()	1
